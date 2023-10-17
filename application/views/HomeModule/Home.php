@@ -8,10 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>File System</title>
-    
+
     <link rel="stylesheet" href="<?= base_url() ?>assets/cdn/bootstrap4.0.min.css">
     <!-- <link rel="stylesheet" href="<?= base_url() ?>assets/cdn/font-awesome.min.css"> -->
-   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
@@ -26,6 +26,10 @@
         #myiframe {
             width: 600px;
             height: 100%;
+        }
+
+        .comment-action:hover {
+            color: blue
         }
     </style>
 </head>
@@ -104,45 +108,100 @@
             <hr>
             <div class="row">
                 <div class="all_content" id="home">
-                    home
-                    <table class="table">
-                        <thead>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                            <th>6</th>
-                        </thead>
-                        <tbody>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                        </tbody>
-                    </table>
+                    <div class="card p-4">
+                        <div class="container row " style="border-bottom: 1px gray">
+                            <div class="row d-flex">
+                                <div>
+                                    <img style="max-width:40px;border:1px;border-radius:50%" src="<?= base_url() ?>assets/user_profile/profile.png" alt="" srcset=""> &nbsp; <b>Admin</b>
+                                </div>
+                            </div>
+                            <div class="row ml-5">
+                                content ..
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col d-flex ml-5">
+                                <!-- <a class="comment-action" href="#">like</a> &nbsp;&#x2022;&nbsp; -->
+                                <a class="comment-action" href="#">comments</a> &nbsp;&#x2022;&nbsp;
+                                <!-- <a class="comment-action" href="#">share</a> -->
+                            </div>
+                            <br>
+                            <div class="row comment_section ml-5">
+                                <div class="row d-flex ">
+                                    <div class="col-md-12 col-lg-10 col-xl-8">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="d-flex flex-start">
+                                                    <img class="rounded-circle shadow-1-strong me-3" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar" width="65" height="65" />
+                                                    <div class="flex-grow-1 flex-shrink-1">
+                                                        <div>
+                                                            <div class="d-flex justify-content-between align-items-center">
+                                                                <p class="mb-1">
+                                                                    Maria Smantha <span class="small">- 2 hours ago</span>
+                                                                </p>
+                                                                <a href="#!"><i class="fas fa-reply fa-xs"></i><span class="small"> reply</span></a>
+                                                            </div>
+                                                            <p class="small mb-0">
+                                                                It is a long established fact that a reader will be distracted by
+                                                                the readable content of a page.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- sub comment -->
+                                                        <div class="d-flex flex-start mt-4">
+                                                            <a class="me-3" href="#">
+                                                                <img class="rounded-circle shadow-1-strong" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(11).webp" alt="avatar" width="65" height="65" />
+                                                            </a>
+                                                            <div class="flex-grow-1 flex-shrink-1">
+                                                                <div>
+                                                                    <div class="d-flex justify-content-between align-items-center">
+                                                                        <p class="mb-1">
+                                                                            Simona Disa <span class="small">- 3 hours ago</span>
+                                                                        </p>
+                                                                    </div>
+                                                                    <p class="small mb-0">
+                                                                        letters, as opposed to using 'Content here, content here',
+                                                                        making it look like readable English.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- sub comment end-->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- end #home -->
                 <div class="all_content" id="quiz" style="display: none;">
                     quiz
                     <div id="quiz_content"></div>
                 </div>
                 <div class="all_content" id="subject" style="display: none;">
-                <div class="row">
-                    <div class="col-3">
-                        <ul>
-                            <li>pdf1</li>
-                            <li>pdf2</li>
-                            <li>pdf3</li>
-                            <li>pdf4</li>
-                            <li>pdf5</li>
-                        </ul>
+                    <div class="row">
+                        <div class="col-2">
+                            <ul>
+                                <li>sadds.pdf</li>
+                                <li>pdf2</li>
+                                <li>pdf3</li>
+                                <li>pdf4</li>
+                                <li>pdf5</li>
+                            </ul>
+                        </div>
+                        <div class="col-1">
+
+                        </div>
+                        <div class="col-9" style="max-width: 80%;">
+                            <iframe src="<?= base_url() ?>assets/files/sample.pdf" height="950" style="width:100%" title="Name"></iframe>
+                        </div>
                     </div>
-                    <div class="col-9">
-                        <iframe src="<?= base_url() ?>assets/files/sample.pdf" height="950" width="950" title="Name"></iframe>
-                    </div>
-                </div>
                 </div>
                 <div class="all_content" id="Portfolio" style="display: none;">
                     portfolio
@@ -150,12 +209,12 @@
             </div>
             <footer>
                 <p style="opacity:0.0"> _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-                 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ </p>
+                    _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ </p>
             </footer>
 
         </div>
     </div>
-    
+
 
     <!-- Modal -->
     <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="true">
@@ -250,10 +309,10 @@
                 $('#LoginModal').modal('show')
             })
 
-            $('#login_form').on('submit',function(e){
+            $('#login_form').on('submit', function(e) {
                 e.preventDefault();
                 console.log('data')
-                if($('#username').val() == ''){
+                if ($('#username').val() == '') {
                     Toastify({
                         text: `Username is Required`,
                         className: "error",
@@ -263,7 +322,7 @@
                     }).showToast();
                     return false;
                 }
-                if($('#password').val() == ''){
+                if ($('#password').val() == '') {
                     Toastify({
                         text: `Password is Required`,
                         className: "error",
@@ -279,17 +338,16 @@
                     url: `${base_url}login`,
                     processData: false,
                     contentType: false,
-                    data:formData,
-                    dataType:'json',
+                    data: formData,
+                    dataType: 'json',
                     success: function(data) {
                         console.log(data.user);
-                        if(data.user==0){
-                            location.href = base_url+'Admin-view';
-                        }
-                        else{
+                        if (data.user == 0) {
+                            location.href = base_url + 'Admin-view';
+                        } else {
                             location.reload();
                         }
-                    
+
                     }
                 });
             })
